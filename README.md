@@ -131,8 +131,7 @@ Observe na imagem a seguir que temos duas rotas já pré-configuradas. A primeir
 
   <img width="475" alt="Captura de tela 2023-08-29 235001" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/7c23faf2-5cb9-4f78-a810-4d26a9f9520a">
 
-  <img width="629" alt="Captura de tela 2023-08-29 235522" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/03631f9f-6c04-4877-b9ff-cc8b064972f4">
-                               Janela de Configuração
+
 
 Além disso, na seção chamada "IoT Edge Modules", continue navegando e clique em "Runtime Settings". Dentro dessa seção, realize a modificação da versão dos módulos "Edge Agent" e "Edge Hub" para a versão mais recente, que é a 1.2. Depois de fazer essa alteração, não se esqueça de aplicar as mudanças antes de prosseguir.   
 
