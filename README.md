@@ -67,7 +67,8 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
  * Consultando a versão do Docker instalada
    $ docker version
    
-   <img width="245" alt="image" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/0cca7307-2ba5-4699-8e7e-b2c82704c848">
+  ![docker](https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/10e20a68-828f-40b0-a1fd-e17c871050a8)
+
 
 
 
