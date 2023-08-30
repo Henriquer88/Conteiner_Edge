@@ -26,7 +26,7 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
 
 
 ## Criando uma instância no IOT Hub
-Nessa etapa utilizaremos o PowerShel no azure para fazer as devidas configurações 
+O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. Siga essas etapas no PowerShell para criar um dispositivo IoT Edge.
 
 <img width="897" alt="Captura de tela 2023-08-29 211727" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/c109afd8-9388-4aff-bab3-9e992d9823a8">
                                  Página inicial do Azure
@@ -34,5 +34,29 @@ Nessa etapa utilizaremos o PowerShel no azure para fazer as devidas configuraç�
 * Adicione a extensão azure-iot para gerenciar serviços de IoT pela CLI:
   <img width="933" alt="Captura de tela 2023-08-29 213302" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/d38bc586-2e41-4b2a-a422-80091b639f2e">
   PowerShell Azure
+
+* Crie um Resource Group:
+  az group create -l brazilsouth -n MyResourceGroup
+* Crie um IoT Hub:
+  az iot hub create --resource-group MyResourceGroup --name MyIotHub --sku F1 --partition-count 2
+* Crie um dispositivo Edge:
+  az iot hub device-identity create --device-id MyRasp --hub-name MyIotHub --edge-enabled
+* Recupere a Connection String do Dispositivo:
+  az iot hub device-identity connection-string show --device-id MyRasp --hub-name MyIotHub
+  
+* Instale o IoT Edge Runtime:
+  ```javascript
+  sudo apt-get update && sudo apt-get upgrade
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker Pi
+logout
+docker version
+sudo apt-get install aziot-edge --fix-missing
+
+  ```
+
+
+ 
 
   
