@@ -88,7 +88,7 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
      comando iotedge config mp cria um arquivo de configuração no dispositivo e adiciona a string de conexão passada como argumento. Utilize o seguinte comando usando a 
      string que você guardou anteriormente.
    
-     <img width="891" alt="Captura de tela 2023-08-29 231434" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/e3ab796a-a90b-40f2-b988-e4664ae38fe2">
+     <img width="300" alt="Captura de tela 2023-08-29 231434" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/e3ab796a-a90b-40f2-b988-e4664ae38fe2">
 
      $ sudo iotedge config mp --connection-string 'PASTE_DEVICE_CONNECTION_STRING_HERE'
 
