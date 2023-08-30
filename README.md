@@ -46,8 +46,10 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
 
   # Configuração da Raspberry pi
    Agora faremos o download de pacotes de configuração do repositório da Microsoft e a instalação do IoT Edge Runtime
-  
-  <img width="306" alt="Captura de tela 2023-08-29 221527" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f023af55-8081-41c9-a6bc-59b4484ef651">
+
+
+  <img width="306" alt="Captura de tela 2023-08-29 221527" 
+   src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f023af55-8081-41c9-a6bc-59b4484ef651">
 
 
   
