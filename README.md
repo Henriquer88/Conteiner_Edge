@@ -117,7 +117,9 @@ O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será c
 
   Para realizar a implantação dos módulos no dispositivo, é necessário especificar as imagens, o registro de contêineres e as rotas das mensagens que os módulos utilizarão ao serem executados no dispositivo. Essas informações são fornecidas por meio do IoT Hub, que comporá automaticamente um arquivo chamado "Deployment Manifest" (Manifesto de Implantação). O dispositivo Edge continuamente verifica a presença de novos "Deployment Manifests" ou atualizações no IoT Hub. Ele faz o download desse arquivo para acessar as imagens diretamente no Container Registry indicado pelo arquivo. Isso permite que os contêineres sejam criados localmente, com base nas imagens e tags especificadas. A figura abaixo ilustra a interação entre os diversos elementos desse processo.
 
-  <img width="438" alt="Captura de tela 2023-08-29 234045" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/96ab4209-d590-4760-bab6-b1aeea58082f">
+  :<img width="438" alt="Captura de tela 2023-08-29 234045" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/96ab4209-d590-4760-bab6-b1aeea58082f">:
+
+  
 
 
 
