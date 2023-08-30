@@ -88,7 +88,7 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
      comando iotedge config mp cria um arquivo de configuração no dispositivo e adiciona a string de conexão passada como argumento. Utilize o seguinte comando usando a 
      string que você guardou anteriormente.
    
-     <img width="300" alt="Captura de tela 2023-08-29 231434" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/e3ab796a-a90b-40f2-b988-e4664ae38fe2">
+     <img width="800" alt="Captura de tela 2023-08-29 231434" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/e3ab796a-a90b-40f2-b988-e4664ae38fe2">
 
      $ sudo iotedge config mp --connection-string 'PASTE_DEVICE_CONNECTION_STRING_HERE'
 
@@ -107,6 +107,7 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
     $ sudo iotedge check
 
    <img width="300" alt="Captura de tela 2023-08-29 232522" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/4b97f282-6165-4d76-b0d8-6d41182411cb">
+   
    O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será criado numa próxima etapa.
 
  * Verificação  dos módulos em execução
@@ -114,37 +115,50 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
   <img width="300" alt="Captura de tela 2023-08-29 232730" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/ad04091d-a777-45df-a0f7-37cecf6e9243">
 
  ## Configuração do Azure
-  Primeiramente, vá para o painel do IoT Hub e examine o gráfico que mostra a contagem de mensagens utilizadas, localizado no menu "Visão Geral". Isso lhe permitirá 
-  confirmar a conexão estabelecida pelo dispositivo. Em seguida, navegue até o menu de dispositivos IoT Edge e selecione o dispositivo específico. Lá, clique na opção 
-  "Módulos" localizada na parte inferior da tela para verificar o status dos diversos módulos presentes no dispositivo.
+  Primeiramente, vá para o painel do IoT Hub e examine o gráfico que mostra a contagem de mensagens utilizadas, localizado 
+  no menu "Visão Geral". Isso lhe permitirá confirmar a conexão estabelecida pelo dispositivo. Em seguida, navegue até o 
+  menu de dispositivos IoT Edge e selecione o dispositivo específico. Lá, clique na opção "Módulos" localizada na parte 
+  inferior da tela para verificar o status dos diversos módulos presentes no dispositivo.
 
   <img width="500" alt="Captura de tela 2023-08-29 233450" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8a6334f6-5d42-474a-bd74-caf9c8089902">
 
-  Esses dados nos confirmam que a fase de provisionamento foi concluída com êxito. Note o campo "Resposta do Tempo de Execução" com a mensagem "417 - A configuração de 
-  implantação do dispositivo não está definida", o que indica que o dispositivo está pronto para receber uma nova implantação. Mantenha-se nessa janela para prosseguir com 
-  a próxima etapa
+  Esses dados nos confirmam que a fase de provisionamento foi concluída com êxito. Note o campo "Resposta do Tempo de 
+  Execução" com a mensagem "417 - A configuração de 
+  implantação do dispositivo não está definida", o que indica que o dispositivo está pronto para receber uma nova 
+  implantação. Mantenha-se nessa janela para prosseguir com  a próxima etapa
 
 ##  Deploy de um módulo gerador de dados de temperatura e umidade simulados
 
-  Para realizar a implantação dos módulos no dispositivo, é necessário especificar as imagens, o registro de contêineres e as rotas das mensagens que os módulos utilizarão 
-  ao serem executados no dispositivo. Essas informações são fornecidas por meio do IoT Hub, que comporá automaticamente um arquivo chamado "Deployment Manifest" (Manifesto 
-  de Implantação). O dispositivo Edge continuamente verifica a presença de novos "Deployment Manifests" ou atualizações no IoT Hub. Ele faz o download desse arquivo para 
-  acessar as imagens diretamente no Container Registry indicado pelo arquivo. Isso permite que os contêineres sejam criados localmente, com base nas imagens e tags 
+  Para realizar a implantação dos módulos no dispositivo, é necessário especificar as imagens, o registro de contêineres e 
+  as rotas das mensagens que os módulos utilizarão 
+  ao serem executados no dispositivo. Essas informações são fornecidas por meio do IoT Hub, que comporá automaticamente um 
+  arquivo chamado "Deployment Manifest" (Manifesto 
+  de Implantação). O dispositivo Edge continuamente verifica a presença de novos "Deployment Manifests" ou atualizações no 
+  IoT Hub. Ele faz o download desse arquivo para 
+  acessar as imagens diretamente no Container Registry indicado pelo arquivo. Isso permite que os contêineres sejam criados 
+  localmente, com base nas imagens e tags 
   especificadas. A figura abaixo ilustra a interação entre os diversos elementos desse processo.
 
   <img width="500" alt="Captura de tela 2023-08-29 234045" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/96ab4209-d590-4760-bab6-b1aeea58082f">
 
-  Na sequência, a partir da janela anterior, localize e clique na opção "Set Modules" na barra de navegação superior. Isso o levará à seção de "IoT Edge Modules". Aí, 
-  clique em "Add" e selecione a alternativa "Marketplace Module" para buscar por uma imagem disponível no Marketplace. Na caixa de busca que aparece, digite "Simulated" e 
+  Na sequência, a partir da janela anterior, localize e clique na opção "Set Modules" na barra de navegação superior. Isso 
+  o levará à seção de "IoT Edge Modules". Aí, 
+  clique em "Add" e selecione a alternativa "Marketplace Module" para buscar por uma imagem disponível no Marketplace. Na 
+  caixa de busca que aparece, digite "Simulated" e 
   escolha o módulo chamado "Simulated Temperature Sensor"
 
-  Clique em next para irmos para a próxima etapa do deployment, a etapa de configuração de rotas. Uma rota é composta por um nome que identifica a rota e um valor que 
-  descreve o caminho das mensagens. Podemos configurar uma rota para estabelecer comunicação entre módulos e entre o dispositivo e o IoT Hub. No nosso caso, vamos 
+  Clique em next para irmos para a próxima etapa do deployment, a etapa de configuração de rotas. Uma rota é composta por 
+  um nome que identifica a rota e um valor que 
+  descreve o caminho das mensagens. Podemos configurar uma rota para estabelecer comunicação entre módulos e entre o 
+  dispositivo e o IoT Hub. No nosso caso, vamos 
   configurar uma rota para que as mensagens produzidas pelo módulo de simulação sejam escoadas para o IoT Hub. 
 
-  Observe na imagem a seguir que temos duas rotas já pré-configuradas. A primeira é a padrão e direciona todas as mensagens de qualquer módulo emissor de mensagens para 
-  $upstream, que é o IoT Hub. A segunda rota foi criada automaticamente quando selecionamos o módulo de simulação do Marketplace e direciona o que vem deste módulo para o 
-  IoT Hub. Como essas rotas acabam sendo redundantes, podemos excluir a primeira clicando no ícone da lixeira ao lado da rota. 
+  Observe na imagem a seguir que temos duas rotas já pré-configuradas. A primeira é a padrão e direciona todas as mensagens 
+  de qualquer módulo emissor de mensagens para 
+  $upstream, que é o IoT Hub. A segunda rota foi criada automaticamente quando selecionamos o módulo de simulação do 
+  Marketplace e direciona o que vem deste módulo para o 
+  IoT Hub. Como essas rotas acabam sendo redundantes, podemos excluir a primeira clicando no ícone da lixeira ao lado da 
+  rota. 
 
 
 
