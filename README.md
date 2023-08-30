@@ -119,6 +119,11 @@ O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será c
 
   :<img width="438" alt="Captura de tela 2023-08-29 234045" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/96ab4209-d590-4760-bab6-b1aeea58082f">:
 
+  Na sequência, a partir da janela anterior, localize e clique na opção "Set Modules" na barra de navegação superior. Isso o levará à seção de "IoT Edge Modules". Aí, clique em "Add" e selecione a alternativa "Marketplace Module" para buscar por uma imagem disponível no Marketplace. Na caixa de busca que aparece, digite "Simulated" e escolha o módulo chamado "Simulated Temperature Sensor"
+
+  <img width="475" alt="Captura de tela 2023-08-29 235001" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/7c23faf2-5cb9-4f78-a810-4d26a9f9520a">
+
+
   
 
 
