@@ -28,11 +28,11 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
 # Criando uma instância no IOT Hub
 O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. Siga essas etapas no PowerShell para criar um dispositivo IoT Edge.
 
-<img width="897" alt="Captura de tela 2023-08-29 211727" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/c109afd8-9388-4aff-bab3-9e992d9823a8">
+<img width="800" alt="Captura de tela 2023-08-29 211727" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/c109afd8-9388-4aff-bab3-9e992d9823a8">
                                  Página inicial do Azure
 
 * Adicione a extensão azure-iot para gerenciar serviços de IoT pela CLI:
-  <img width="933" alt="Captura de tela 2023-08-29 213302" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/d38bc586-2e41-4b2a-a422-80091b639f2e">
+  <img width="800" alt="Captura de tela 2023-08-29 213302" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/d38bc586-2e41-4b2a-a422-80091b639f2e">
   PowerShell Azure
 
 * Crie um Resource Group:
@@ -67,7 +67,8 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
  * Consultando a versão do Docker instalada
    $ docker version
    
-  ![docker](https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/10e20a68-828f-40b0-a1fd-e17c871050a8)
+<img width="300" alt="Captura de tela 2023-08-29 224936" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/967fe871-99ed-4dba-ba4c-454358e2af9c">
+
 
 
 
