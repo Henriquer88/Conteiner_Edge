@@ -43,6 +43,10 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
   az iot hub device-identity create --device-id MyRasp --hub-name MyIotHub --edge-enabled
 * Recupere a Connection String do Dispositivo:
   az iot hub device-identity connection-string show --device-id MyRasp --hub-name MyIotHub
+
+  ## Configuração da Raspberry pi
+
+  
   
 * Instale o IoT Edge Runtime:
   ```javascript
