@@ -30,3 +30,9 @@ Nessa etapa utilizaremos o PowerShel no azure para fazer as devidas configuraç�
 
 <img width="897" alt="Captura de tela 2023-08-29 211727" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/c109afd8-9388-4aff-bab3-9e992d9823a8">
                                  Página inicial do Azure
+
+* Adicione a extensão azure-iot para gerenciar serviços de IoT pela CLI:
+  <img width="933" alt="Captura de tela 2023-08-29 213302" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/d38bc586-2e41-4b2a-a422-80091b639f2e">
+  PowerShell Azure
+
+  
