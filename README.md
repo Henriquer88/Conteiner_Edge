@@ -109,6 +109,9 @@ O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será c
  ## Configuração do Azure
   Primeiramente, vá para o painel do IoT Hub e examine o gráfico que mostra a contagem de mensagens utilizadas, localizado no menu "Visão Geral". Isso lhe permitirá confirmar a conexão estabelecida pelo dispositivo. Em seguida, navegue até o menu de dispositivos IoT Edge e selecione o dispositivo específico. Lá, clique na opção "Módulos" localizada na parte inferior da tela para verificar o status dos diversos módulos presentes no dispositivo.
 
+  <img width="945" alt="Captura de tela 2023-08-29 233450" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8a6334f6-5d42-474a-bd74-caf9c8089902">
+
+
   
 
 
