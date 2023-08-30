@@ -138,14 +138,16 @@ Na janela do dispositivo, você verá um destaque que indica o status dos módul
 
 ## Verificação do Status dos módulos 
 
- - $ sudo iotedge list
- - $ sudo iotedge check
-
-
+  $ sudo iotedge list
+   
+  $ sudo iotedge check
 
 
 <img width="336" alt="Captura de tela 2023-08-30 000852" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/50736b47-3f85-4529-addf-6bc82e89c9a3">
 
+## Monitorando Mensagens
+Antes de começarmos a monitorar as mensagens no IoT Hub, é importante verificar se o módulo está de fato enviando dados no dispositivo. Para fazer isso, você pode executar o seguinte comando no seu dispositivo IoT Edge:
+$ sudo iotedge logs SimulatedTemperatureSensor -f
 
 
 
