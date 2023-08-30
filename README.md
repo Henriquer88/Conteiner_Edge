@@ -96,20 +96,20 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
 
      Seguindo os passos acima teremos o seguite resultado :
 
-    <img width="300" alt="Captura de tela 2023-08-29 231914" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8295aecc-23a3-40b2-9871-e265ef0bb1c6">
+     <img width="300" alt="Captura de tela 2023-08-29 231914" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8295aecc-23a3-40b2-9871-e265ef0bb1c6">
 
-* Verifique o status do serviço do IoT Edge:
-  $ sudo iotedge system status
+  * Verifique o status do serviço do IoT Edge:
+    $ sudo iotedge system status
 
    <img width="253" alt="Captura de tela 2023-08-29 232246" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/91e2575b-9301-480e-91ec-8c63595d5641">
 
-* Verificação das configurações aplicadas
-  $ sudo iotedge check
+  * Verificação das configurações aplicadas
+    $ sudo iotedge check
 
-  <img width="300" alt="Captura de tela 2023-08-29 232522" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/4b97f282-6165-4d76-b0d8-6d41182411cb">
-O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será criado numa próxima etapa.
+   <img width="300" alt="Captura de tela 2023-08-29 232522" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/4b97f282-6165-4d76-b0d8-6d41182411cb">
+   O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será criado numa próxima etapa.
 
-* Verificação  dos módulos em execução
+ * Verificação  dos módulos em execução
    
   <img width="300" alt="Captura de tela 2023-08-29 232730" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/ad04091d-a777-45df-a0f7-37cecf6e9243">
 
