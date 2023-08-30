@@ -9,3 +9,16 @@ O tutorial visa capacitar os desenvolvedores a entenderem e implementarem o conc
 ## Dispositivo Edge
 
 Um dispositivo IoT Edge consiste basicamente em um dispositivo com um sistema operacional executando o IoT Edge Runtime, que é uma coletânea de software que permite o gerenciamento dos módulos do IoT Edge, que são pacotes executáveis compatíveis com contêineres Docke.
+
+## Etapas do IOT Edge
+O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um dispositivo IoT Edge conectado ao Azure IoT Hub:
+
+ 1 - Pré-requisitos: É necessário possuir uma conta do Azure com créditos disponíveis e a Azure CLI instalada para gerenciar recursos via linha de comando.
+
+2 - Criação do IoT Hub: É criado um IoT Hub no Azure, que atua como ponto central para gerenciar e conectar dispositivos IoT Edge.
+
+3 - Registro do Dispositivo: Um dispositivo IoT Edge (Raspberry Pi) é registrado no IoT Hub, gerando uma identidade para conexão.
+
+4 - Instalação do IoT Edge Runtime: O IoT Edge Runtime é instalado na Raspberry Pi, preparando o dispositivo para executar módulos Edge.
+
+5 - Configuração do Dispositivo: O dispositivo
