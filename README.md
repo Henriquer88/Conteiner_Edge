@@ -111,8 +111,14 @@ O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será c
 
   <img width="945" alt="Captura de tela 2023-08-29 233450" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8a6334f6-5d42-474a-bd74-caf9c8089902">
 
+  Esses dados nos confirmam que a fase de provisionamento foi concluída com êxito. Note o campo "Resposta do Tempo de Execução" com a mensagem "417 - A configuração de implantação do dispositivo não está definida", o que indica que o dispositivo está pronto para receber uma nova implantação. Mantenha-se nessa janela para prosseguir com a próxima etapa
 
-  
+##  Deploy de um módulo gerador de dados de temperatura e umidade simulados
+
+  Para realizar a implantação dos módulos no dispositivo, é necessário especificar as imagens, o registro de contêineres e as rotas das mensagens que os módulos utilizarão ao serem executados no dispositivo. Essas informações são fornecidas por meio do IoT Hub, que comporá automaticamente um arquivo chamado "Deployment Manifest" (Manifesto de Implantação). O dispositivo Edge continuamente verifica a presença de novos "Deployment Manifests" ou atualizações no IoT Hub. Ele faz o download desse arquivo para acessar as imagens diretamente no Container Registry indicado pelo arquivo. Isso permite que os contêineres sejam criados localmente, com base nas imagens e tags especificadas. A figura abaixo ilustra a interação entre os diversos elementos desse processo.
+
+  <img width="438" alt="Captura de tela 2023-08-29 234045" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/96ab4209-d590-4760-bab6-b1aeea58082f">
+
 
 
 
