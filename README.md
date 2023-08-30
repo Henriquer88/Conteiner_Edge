@@ -3,14 +3,14 @@
 ## Objetivo
 O objetivo principal do tutorial é demonstrar como criar, configurar e implantar dispositivos IoT Edge, fornecendo uma visão detalhada de todo o processo
 
-## Introdução
+# Introdução
 O tutorial visa capacitar os desenvolvedores a entenderem e implementarem o conceito de dispositivos IoT Edge utilizando a plataforma Microsoft Azure. Ao longo do guia, os participantes são conduzidos através dos passos necessários para transformar uma Raspberry Pi em um dispositivo IoT Edge, capaz de executar serviços localmente e transmitir dados para a nuvem, através do Azure IoT Hub.
 
 ## Dispositivo Edge
 
 Um dispositivo IoT Edge consiste basicamente em um dispositivo com um sistema operacional executando o IoT Edge Runtime, que é uma coletânea de software que permite o gerenciamento dos módulos do IoT Edge, que são pacotes executáveis compatíveis com contêineres Docke.
 
-## Etapas do IOT Edge
+# Etapas do IOT Edge
 O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um dispositivo IoT Edge conectado ao Azure IoT Hub:
 
  1 - Pré-requisitos: É necessário possuir uma conta do Azure com créditos disponíveis e a Azure CLI instalada para gerenciar recursos via linha de comando. https://azure.microsoft.com/pt-br/free/
@@ -25,7 +25,7 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
 
 
 
-## Criando uma instância no IOT Hub
+# Criando uma instância no IOT Hub
 O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. Siga essas etapas no PowerShell para criar um dispositivo IoT Edge.
 
 <img width="897" alt="Captura de tela 2023-08-29 211727" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/c109afd8-9388-4aff-bab3-9e992d9823a8">
@@ -44,7 +44,10 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
 * Recupere a Connection String do Dispositivo:
   az iot hub device-identity connection-string show --device-id MyRasp --hub-name MyIotHub
 
-  ## Configuração da Raspberry pi
+  # Configuração da Raspberry pi
+   Agora faremos o download de pacotes de configuração do repositório da Microsoft e a instalação do IoT Edge Runtime
+  <img width="306" alt="Captura de tela 2023-08-29 221527" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f023af55-8081-41c9-a6bc-59b4484ef651">
+
 
   
   
@@ -57,7 +60,6 @@ sudo usermod -aG docker Pi
 logout
 docker version
 sudo apt-get install aziot-edge --fix-missing
-
   ```
 
 
