@@ -121,6 +121,14 @@ O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será c
 
 Na sequência, a partir da janela anterior, localize e clique na opção "Set Modules" na barra de navegação superior. Isso o levará à seção de "IoT Edge Modules". Aí, clique em "Add" e selecione a alternativa "Marketplace Module" para buscar por uma imagem disponível no Marketplace. Na caixa de busca que aparece, digite "Simulated" e escolha o módulo chamado "Simulated Temperature Sensor"
 
+Clique em next para irmos para a próxima etapa do deployment, a etapa de configuração de rotas. Uma rota é composta por um nome que identifica a rota e um valor que descreve o caminho das mensagens. Podemos configurar uma rota para estabelecer comunicação entre módulos e entre o dispositivo e o IoT Hub. No nosso caso, vamos configurar uma rota para que as mensagens produzidas pelo módulo de simulação sejam escoadas para o IoT Hub. 
+
+Observe na imagem a seguir que temos duas rotas já pré-configuradas. A primeira é a padrão e direciona todas as mensagens de qualquer módulo emissor de mensagens para $upstream, que é o IoT Hub. A segunda rota foi criada automaticamente quando selecionamos o módulo de simulação do Marketplace e direciona o que vem deste módulo para o IoT Hub. Como essas rotas acabam sendo redundantes, podemos excluir a primeira clicando no ícone da lixeira ao lado da rota. 
+
+<img width="662" alt="Captura de tela 2023-08-30 003104" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/d2255c72-5564-4dcf-a4f2-1f113987205e">
+
+
+
   <img width="475" alt="Captura de tela 2023-08-29 235001" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/7c23faf2-5cb9-4f78-a810-4d26a9f9520a">
 
   <img width="629" alt="Captura de tela 2023-08-29 235522" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/03631f9f-6c04-4877-b9ff-cc8b064972f4">
