@@ -99,17 +99,17 @@ Seguindo os passos acima teremos o seguite resultado :
 * Verificação das configurações aplicadas
   $ sudo iotedge check
 
-  <img width="347" alt="Captura de tela 2023-08-29 232522" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/4b97f282-6165-4d76-b0d8-6d41182411cb">
+  <img width="300" alt="Captura de tela 2023-08-29 232522" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/4b97f282-6165-4d76-b0d8-6d41182411cb">
 O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será criado numa próxima etapa.
 
 *  Verificação  dos módulos em execução
    
-  <img width="339" alt="Captura de tela 2023-08-29 232730" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/ad04091d-a777-45df-a0f7-37cecf6e9243">
+  <img width="300" alt="Captura de tela 2023-08-29 232730" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/ad04091d-a777-45df-a0f7-37cecf6e9243">
 
  ## Configuração do Azure
   Primeiramente, vá para o painel do IoT Hub e examine o gráfico que mostra a contagem de mensagens utilizadas, localizado no menu "Visão Geral". Isso lhe permitirá confirmar a conexão estabelecida pelo dispositivo. Em seguida, navegue até o menu de dispositivos IoT Edge e selecione o dispositivo específico. Lá, clique na opção "Módulos" localizada na parte inferior da tela para verificar o status dos diversos módulos presentes no dispositivo.
 
-  <img width="945" alt="Captura de tela 2023-08-29 233450" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8a6334f6-5d42-474a-bd74-caf9c8089902">
+  <img width="500" alt="Captura de tela 2023-08-29 233450" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8a6334f6-5d42-474a-bd74-caf9c8089902">
 
   Esses dados nos confirmam que a fase de provisionamento foi concluída com êxito. Note o campo "Resposta do Tempo de Execução" com a mensagem "417 - A configuração de implantação do dispositivo não está definida", o que indica que o dispositivo está pronto para receber uma nova implantação. Mantenha-se nessa janela para prosseguir com a próxima etapa
 
@@ -117,7 +117,7 @@ O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será c
 
   Para realizar a implantação dos módulos no dispositivo, é necessário especificar as imagens, o registro de contêineres e as rotas das mensagens que os módulos utilizarão ao serem executados no dispositivo. Essas informações são fornecidas por meio do IoT Hub, que comporá automaticamente um arquivo chamado "Deployment Manifest" (Manifesto de Implantação). O dispositivo Edge continuamente verifica a presença de novos "Deployment Manifests" ou atualizações no IoT Hub. Ele faz o download desse arquivo para acessar as imagens diretamente no Container Registry indicado pelo arquivo. Isso permite que os contêineres sejam criados localmente, com base nas imagens e tags especificadas. A figura abaixo ilustra a interação entre os diversos elementos desse processo.
 
-  :<img width="438" alt="Captura de tela 2023-08-29 234045" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/96ab4209-d590-4760-bab6-b1aeea58082f">:
+  :<img width="500" alt="Captura de tela 2023-08-29 234045" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/96ab4209-d590-4760-bab6-b1aeea58082f">:
 
 Na sequência, a partir da janela anterior, localize e clique na opção "Set Modules" na barra de navegação superior. Isso o levará à seção de "IoT Edge Modules". Aí, clique em "Add" e selecione a alternativa "Marketplace Module" para buscar por uma imagem disponível no Marketplace. Na caixa de busca que aparece, digite "Simulated" e escolha o módulo chamado "Simulated Temperature Sensor"
 
