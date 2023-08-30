@@ -72,7 +72,7 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
   *  Consultando a versão do Docker instalada
      $ docker version
    
-    <img width="300" alt="Captura de tela 2023-08-29 224936" 
+     <img width="300" alt="Captura de tela 2023-08-29 224936" 
     src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/967fe871-99ed-4dba-ba4c-454358e2af9c">
 
   *  Verificação se a instação está correta
