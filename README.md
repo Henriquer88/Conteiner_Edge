@@ -83,10 +83,7 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
 
   
   
-* Instale o IoT Edge Runtime:
-  ```javascript
 
-  ```
 
 
  
