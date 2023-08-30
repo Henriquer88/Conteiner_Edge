@@ -201,7 +201,8 @@ Durante a execução do comando, você deverá visualizar mensagens semelhantes 
 
 ## Conclusão
 
-Neste tutorial, exploramos desde o início como transformar uma Raspberry Pi em um dispositivo IoT Edge, realizar o deploy de um módulo diretamente do Marketplace da Microsoft e conectá-lo ao IoT Hub do Azure.Este é apenas o começo de nossa jornada com o IoT Edge. Há um imenso potencial ao movermos a computação da nuvem para a borda. Em um próximo tutorial, exploraremos como criar nossos próprios módulos e como encapsular serviços do Azure em um módulo para execução local.
+
+Neste tutorial, abordamos como transformar uma Raspberry Pi em um dispositivo IoT Edge, realizar o deploy de um módulo diretamente do Marketplace da Microsoft e conectá-lo ao IoT Hub do Azure. Este é apenas o começo do potencial do IoT Edge, que permite descentralizar a computação, passando-a da nuvem para dispositivos próximos.
 
 
 
