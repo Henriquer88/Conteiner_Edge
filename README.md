@@ -67,7 +67,9 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
  * Consultando a versão do Docker instalada
    $ docker version
    
-<img width="300" alt="Captura de tela 2023-08-29 224936" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/967fe871-99ed-4dba-ba4c-454358e2af9c">
+   <img width="300" alt="Captura de tela 2023-08-29 224936" 
+   src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/967fe871-99ed-4dba-ba4c-454358e2af9c">
+
 
  * Verificação se a instação está correta
 
@@ -83,13 +85,7 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
   
 * Instale o IoT Edge Runtime:
   ```javascript
-  sudo apt-get update && sudo apt-get upgrade
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-sudo usermod -aG docker Pi
-logout
-docker version
-sudo apt-get install aziot-edge --fix-missing
+
   ```
 
 
