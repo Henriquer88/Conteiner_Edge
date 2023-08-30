@@ -72,6 +72,10 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
 
 
  * Verificação se a instação está correta
+   Verificamos a instalação com um Hello-World
+   
+ <img width="245" alt="Captura de tela 2023-08-29 225514" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f3e101fb-42da-455e-a9fd-718164c95a3e">
+
 
 
 
