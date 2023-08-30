@@ -50,13 +50,13 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
 # Configuração da Raspberry pi
 
   Agora faremos o download de pacotes de configuração do repositório da Microsoft e a instalação do IoT Edge Runtime
-  curl https://packages.microsoft.com/config/debian/stretch/multiarch/prod.list > ./microsoft-prod.list
+  curl https://packages.microsoft.com/config/debian/stretch/multiarch/prod.list >./microsoft-prod.list
 
    <img width="306" alt="Captura de tela 2023-08-29 221527" 
    src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f023af55-8081-41c9-a6bc-59b4484ef651">
   
 
-  $ sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
+   $ sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
   
   * Instale a chave pública GPG Microsoft.
     $ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
