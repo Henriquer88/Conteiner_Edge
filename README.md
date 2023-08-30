@@ -81,7 +81,18 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
 
  * Vamos agora à segunda etapa do provisionamento manual, configurando o dispositivo com sua string de conexão que o permite conectar a sua identidade na nuvem. O comando iotedge config mp cria um arquivo de configuração no dispositivo e adiciona a string de conexão passada como argumento. Utilize o seguinte comando usando a string que você guardou anteriormente.
    
-"connectionString": "HostName=Hr88.azure-devices.net;DeviceId=MyRasp1;SharedAccessKey=+ec8wPpQXkXqFz/DwjDjtPx0Uz6KZzx/bqPwVqh70+o="
+<img width="891" alt="Captura de tela 2023-08-29 231434" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/e3ab796a-a90b-40f2-b988-e4664ae38fe2">
+
+$ sudo iotedge config mp --connection-string 'PASTE_DEVICE_CONNECTION_STRING_HERE'
+
+$ sudo iotedge config apply
+
+Seguindo os passos acima teremos o seguite resultado
+
+<img width="300" alt="Captura de tela 2023-08-29 231914" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8295aecc-23a3-40b2-9871-e265ef0bb1c6">
+
+
+
 
 
 
