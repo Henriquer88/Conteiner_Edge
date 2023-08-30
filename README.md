@@ -46,10 +46,31 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
 
   # Configuração da Raspberry pi
    Agora faremos o download de pacotes de configuração do repositório da Microsoft e a instalação do IoT Edge Runtime
-
+    curl https://packages.microsoft.com/config/debian/stretch/multiarch/prod.list > ./microsoft-prod.list
 
   <img width="306" alt="Captura de tela 2023-08-29 221527" 
    src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f023af55-8081-41c9-a6bc-59b4484ef651">
+   Configuração do repositório da Microsoft
+
+  $ sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
+  * Instale a chave pública GPG Microsoft.
+    $ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+    $ sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/
+
+  * Garanta que os repositórios e o sistema estão atualizados:
+    $ sudo apt-get update && sudo apt-get upgrade
+
+ * Download do script de instalação do Docker
+   $ curl -fsSL https://get.docker.com -o get-docker.sh
+   $ sudo sh get-docker.sh
+
+ * Consultando a versão do Docker instalada
+   $ docker version
+   <img width="245" alt="image" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/0cca7307-2ba5-4699-8e7e-b2c82704c848">
+
+
+
+  
 
 
   
