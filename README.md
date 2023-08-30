@@ -119,9 +119,29 @@ O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será c
 
   :<img width="438" alt="Captura de tela 2023-08-29 234045" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/96ab4209-d590-4760-bab6-b1aeea58082f">:
 
-  Na sequência, a partir da janela anterior, localize e clique na opção "Set Modules" na barra de navegação superior. Isso o levará à seção de "IoT Edge Modules". Aí, clique em "Add" e selecione a alternativa "Marketplace Module" para buscar por uma imagem disponível no Marketplace. Na caixa de busca que aparece, digite "Simulated" e escolha o módulo chamado "Simulated Temperature Sensor"
+Na sequência, a partir da janela anterior, localize e clique na opção "Set Modules" na barra de navegação superior. Isso o levará à seção de "IoT Edge Modules". Aí, clique em "Add" e selecione a alternativa "Marketplace Module" para buscar por uma imagem disponível no Marketplace. Na caixa de busca que aparece, digite "Simulated" e escolha o módulo chamado "Simulated Temperature Sensor"
 
   <img width="475" alt="Captura de tela 2023-08-29 235001" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/7c23faf2-5cb9-4f78-a810-4d26a9f9520a">
+
+  <img width="629" alt="Captura de tela 2023-08-29 235522" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/03631f9f-6c04-4877-b9ff-cc8b064972f4">
+                               Janela de Configuração
+
+Além disso, na seção chamada "IoT Edge Modules", continue navegando e clique em "Runtime Settings". Dentro dessa seção, realize a modificação da versão dos módulos "Edge Agent" e "Edge Hub" para a versão mais recente, que é a 1.2. Depois de fazer essa alteração, não se esqueça de aplicar as mudanças antes de prosseguir.   
+
+<img width="421" alt="Captura de tela 2023-08-29 235801" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/149e6916-960f-470f-aa5b-2df2379fe66d">
+
+Clique em next para irmos para a próxima etapa do deployment, a etapa de configuração de rotas. Uma rota é composta por um nome que identifica a rota e um valor que descreve o caminho das mensagens. Podemos configurar uma rota para estabelecer comunicação entre módulos e entre o dispositivo e o IoT Hub. No nosso caso, vamos configurar uma rota para que as mensagens produzidas pelo módulo de simulação sejam escoadas para o IoT Hub. 
+
+<img width="879" alt="Captura de tela 2023-08-30 000514" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/cd64acf1-c9f0-41b5-b350-b70550e82603">
+
+Na janela do dispositivo, você verá um destaque que indica o status dos módulos após um deployment bem-sucedido. Isso significa que os módulos foram implantados com sucesso no dispositivo e estão em execução. Esse status é uma confirmação de que as etapas anteriores, incluindo a configuração das imagens dos módulos, as rotas de comunicação e a revisão do "Deployment Manifest", foram concluídas com êxito. Verificar esse status é essencial para garantir que a solução IoT Edge esteja operando conforme o planejado.
+
+## Verificação do Status dos módulos 
+$ sudo iotedge list
+$ sudo iotedge check
+<img width="336" alt="Captura de tela 2023-08-30 000852" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/50736b47-3f85-4529-addf-6bc82e89c9a3">
+
+
 
 
   
