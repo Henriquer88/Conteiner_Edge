@@ -13,7 +13,8 @@ Um dispositivo IoT Edge consiste basicamente em um dispositivo com um sistema op
 # Etapas do IOT Edge
 O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um dispositivo IoT Edge conectado ao Azure IoT Hub:
 
- 1 - Pré-requisitos: É necessário possuir uma conta do Azure com créditos disponíveis e a Azure CLI instalada para gerenciar recursos via linha de comando. https://azure.microsoft.com/pt-br/free/
+1 - Pré-requisitos: É necessário possuir uma conta do Azure com créditos disponíveis e a Azure CLI instalada para gerenciar recursos via linha de comando. 
+     https://azure.microsoft.com/pt-br/free/
 
 2 - Criação do IoT Hub: É criado um IoT Hub no Azure, que atua como ponto central para gerenciar e conectar dispositivos IoT Edge.
 
@@ -28,8 +29,8 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
 # Criando uma instância no IOT Hub
 O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. Siga essas etapas no PowerShell para criar um dispositivo IoT Edge.
 
-<img width="800" alt="Captura de tela 2023-08-29 211727" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/c109afd8-9388-4aff-bab3-9e992d9823a8">
-                                 Página inicial do Azure
+  <img width="800" alt="Captura de tela 2023-08-29 211727" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/c109afd8-9388-4aff-bab3-9e992d9823a8">
+                                                    Página inicial do Azure
 
 * Adicione a extensão azure-iot para gerenciar serviços de IoT pela CLI:
   <img width="800" alt="Captura de tela 2023-08-29 213302" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/d38bc586-2e41-4b2a-a422-80091b639f2e">
@@ -48,7 +49,7 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
    Agora faremos o download de pacotes de configuração do repositório da Microsoft e a instalação do IoT Edge Runtime
     curl https://packages.microsoft.com/config/debian/stretch/multiarch/prod.list > ./microsoft-prod.list
 
-  <img width="306" alt="Captura de tela 2023-08-29 221527" 
+   <img width="306" alt="Captura de tela 2023-08-29 221527" 
    src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f023af55-8081-41c9-a6bc-59b4484ef651">
    Configuração do repositório da Microsoft
 
@@ -60,28 +61,28 @@ O tutorial simplifica a implementação do Azure IoT Edge usando o PowerShell. S
   * Garanta que os repositórios e o sistema estão atualizados:
     $ sudo apt-get update && sudo apt-get upgrade
 
- * Download do script de instalação do Docker
-   $ curl -fsSL https://get.docker.com -o get-docker.sh
-   $ sudo sh get-docker.sh
+ *  Download do script de instalação do Docker
+    $ curl -fsSL https://get.docker.com -o get-docker.sh
+    $ sudo sh get-docker.sh
 
- * Consultando a versão do Docker instalada
+*  Consultando a versão do Docker instalada
    $ docker version
    
    <img width="300" alt="Captura de tela 2023-08-29 224936" 
    src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/967fe871-99ed-4dba-ba4c-454358e2af9c">
 
- * Verificação se a instação está correta
+*  Verificação se a instação está correta
    Verificamos a instalação com um Hello-World
    
    <img width="300" alt="Captura de tela 2023-08-29 225514" 
    src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f3e101fb-42da-455e-a9fd-718164c95a3e">
 
- * Instalação da versão mais atualizada do IoT Edge Runtime
+*  Instalação da versão mais atualizada do IoT Edge Runtime
    $ sudo apt-get install aziot-edge --fix-missing
 
- * Vamos agora à segunda etapa do provisionamento manual, configurando o dispositivo com sua string de conexão que o permite conectar a sua identidade na nuvem. O comando iotedge config mp cria um arquivo de configuração no dispositivo e adiciona a string de conexão passada como argumento. Utilize o seguinte comando usando a string que você guardou anteriormente.
+*  Vamos agora à segunda etapa do provisionamento manual, configurando o dispositivo com sua string de conexão que o permite conectar a sua identidade na nuvem. O comando iotedge config mp cria um arquivo de configuração no dispositivo e adiciona a string de conexão passada como argumento. Utilize o seguinte comando usando a string que você guardou anteriormente.
    
-<img width="891" alt="Captura de tela 2023-08-29 231434" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/e3ab796a-a90b-40f2-b988-e4664ae38fe2">
+  <img width="891" alt="Captura de tela 2023-08-29 231434" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/e3ab796a-a90b-40f2-b988-e4664ae38fe2">
 
 $ sudo iotedge config mp --connection-string 'PASTE_DEVICE_CONNECTION_STRING_HERE'
 
@@ -89,7 +90,7 @@ $ sudo iotedge config apply
 
 Seguindo os passos acima teremos o seguite resultado :
 
-<img width="300" alt="Captura de tela 2023-08-29 231914" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8295aecc-23a3-40b2-9871-e265ef0bb1c6">
+ <img width="300" alt="Captura de tela 2023-08-29 231914" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8295aecc-23a3-40b2-9871-e265ef0bb1c6">
 
 * Verifique o status do serviço do IoT Edge:
   $ sudo iotedge system status
@@ -117,7 +118,7 @@ O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será c
 
   Para realizar a implantação dos módulos no dispositivo, é necessário especificar as imagens, o registro de contêineres e as rotas das mensagens que os módulos utilizarão ao serem executados no dispositivo. Essas informações são fornecidas por meio do IoT Hub, que comporá automaticamente um arquivo chamado "Deployment Manifest" (Manifesto de Implantação). O dispositivo Edge continuamente verifica a presença de novos "Deployment Manifests" ou atualizações no IoT Hub. Ele faz o download desse arquivo para acessar as imagens diretamente no Container Registry indicado pelo arquivo. Isso permite que os contêineres sejam criados localmente, com base nas imagens e tags especificadas. A figura abaixo ilustra a interação entre os diversos elementos desse processo.
 
-  :<img width="500" alt="Captura de tela 2023-08-29 234045" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/96ab4209-d590-4760-bab6-b1aeea58082f">:
+  <img width="500" alt="Captura de tela 2023-08-29 234045" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/96ab4209-d590-4760-bab6-b1aeea58082f">
 
 Na sequência, a partir da janela anterior, localize e clique na opção "Set Modules" na barra de navegação superior. Isso o levará à seção de "IoT Edge Modules". Aí, clique em "Add" e selecione a alternativa "Marketplace Module" para buscar por uma imagem disponível no Marketplace. Na caixa de busca que aparece, digite "Simulated" e escolha o módulo chamado "Simulated Temperature Sensor"
 
