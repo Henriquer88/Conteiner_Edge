@@ -50,7 +50,7 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
 # Configuração da Raspberry pi
 
   Agora faremos o download de pacotes de configuração do repositório da Microsoft e a instalação do IoT Edge Runtime
-    curl https://packages.microsoft.com/config/debian/stretch/multiarch/prod.list > ./microsoft-prod.list
+  curl https://packages.microsoft.com/config/debian/stretch/multiarch/prod.list > ./microsoft-prod.list
 
    <img width="306" alt="Captura de tela 2023-08-29 221527" 
    src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f023af55-8081-41c9-a6bc-59b4484ef651">
@@ -65,21 +65,21 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
   * Garanta que os repositórios e o sistema estão atualizados:
     $ sudo apt-get update && sudo apt-get upgrade
 
-  *  Download do script de instalação do Docker
+  * Download do script de instalação do Docker
     $ curl -fsSL https://get.docker.com -o get-docker.sh
     $ sudo sh get-docker.sh
 
   *  Consultando a versão do Docker instalada
-    $ docker version
+     $ docker version
    
-   <img width="300" alt="Captura de tela 2023-08-29 224936" 
-   src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/967fe871-99ed-4dba-ba4c-454358e2af9c">
+    <img width="300" alt="Captura de tela 2023-08-29 224936" 
+    src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/967fe871-99ed-4dba-ba4c-454358e2af9c">
 
   *  Verificação se a instação está correta
      Verificamos a instalação com um Hello-World
    
-   <img width="300" alt="Captura de tela 2023-08-29 225514" 
-   src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f3e101fb-42da-455e-a9fd-718164c95a3e">
+     <img width="300" alt="Captura de tela 2023-08-29 225514" 
+     src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/f3e101fb-42da-455e-a9fd-718164c95a3e">
 
   *  Instalação da versão mais atualizada do IoT Edge Runtime
      $ sudo apt-get install aziot-edge --fix-missing
@@ -88,20 +88,20 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
      comando iotedge config mp cria um arquivo de configuração no dispositivo e adiciona a string de conexão passada como argumento. Utilize o seguinte comando usando a 
      string que você guardou anteriormente.
    
-  <img width="891" alt="Captura de tela 2023-08-29 231434" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/e3ab796a-a90b-40f2-b988-e4664ae38fe2">
+     <img width="891" alt="Captura de tela 2023-08-29 231434" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/e3ab796a-a90b-40f2-b988-e4664ae38fe2">
 
-  $ sudo iotedge config mp --connection-string 'PASTE_DEVICE_CONNECTION_STRING_HERE'
+     $ sudo iotedge config mp --connection-string 'PASTE_DEVICE_CONNECTION_STRING_HERE'
 
-  $ sudo iotedge config apply
+     $ sudo iotedge config apply
 
- Seguindo os passos acima teremos o seguite resultado :
+     Seguindo os passos acima teremos o seguite resultado :
 
- <img width="300" alt="Captura de tela 2023-08-29 231914" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8295aecc-23a3-40b2-9871-e265ef0bb1c6">
+    <img width="300" alt="Captura de tela 2023-08-29 231914" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/8295aecc-23a3-40b2-9871-e265ef0bb1c6">
 
 * Verifique o status do serviço do IoT Edge:
   $ sudo iotedge system status
 
- <img width="253" alt="Captura de tela 2023-08-29 232246" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/91e2575b-9301-480e-91ec-8c63595d5641">
+   <img width="253" alt="Captura de tela 2023-08-29 232246" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/91e2575b-9301-480e-91ec-8c63595d5641">
 
 * Verificação das configurações aplicadas
   $ sudo iotedge check
@@ -109,7 +109,7 @@ O tutorial segue as etapas detalhadas para transformar uma Raspberry Pi em um di
   <img width="300" alt="Captura de tela 2023-08-29 232522" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/4b97f282-6165-4d76-b0d8-6d41182411cb">
 O erro acima é esperado porque o módulo edgeHub ainda não foi criado. Será criado numa próxima etapa.
 
-*  Verificação  dos módulos em execução
+* Verificação  dos módulos em execução
    
   <img width="300" alt="Captura de tela 2023-08-29 232730" src="https://github.com/Henriquer88/Conteiner_Edge/assets/60757810/ad04091d-a777-45df-a0f7-37cecf6e9243">
 
